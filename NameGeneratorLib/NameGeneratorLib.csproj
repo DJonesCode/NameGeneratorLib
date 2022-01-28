@@ -1,0 +1,19 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="FemaleNames.txt" />
+    <None Remove="LastNames.txt" />
+    <None Remove="MaleNames.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="FemaleNames.txt" />
+    <EmbeddedResource Include="LastNames.txt" />
+    <EmbeddedResource Include="MaleNames.txt" />
+  </ItemGroup>
+
+</Project>
