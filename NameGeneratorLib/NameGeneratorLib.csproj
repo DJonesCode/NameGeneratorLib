@@ -4,6 +4,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <OutputPath>docs\</OutputPath>
+    <DocumentationFile>docs\NameGeneratorLib.xml</DocumentationFile>
+  </PropertyGroup>
+
   <ItemGroup>
     <None Remove="FemaleNames.txt" />
     <None Remove="LastNames.txt" />
@@ -14,6 +19,13 @@
     <EmbeddedResource Include="FemaleNames.txt" />
     <EmbeddedResource Include="LastNames.txt" />
     <EmbeddedResource Include="MaleNames.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Vsxmd" Version="1.4.5">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
 </Project>
